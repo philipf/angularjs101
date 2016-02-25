@@ -14,8 +14,10 @@ namespace Angular1MvcBootstrap
 
             bundles.Add(new ScriptBundle("~/myApp")
                 .Include("~/Scripts/angular.js")
+                .Include("~/Scripts/angular-route.js")
                 .Include("~/angular/app.js")
                 .Include("~/angular/individual.js")
+                .Include("~/angular/company.js")
                 );
         }
     }

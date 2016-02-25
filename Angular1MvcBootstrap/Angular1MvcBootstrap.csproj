@@ -126,6 +126,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="angular\company.js" />
+    <Content Include="angular\company.html" />
+    <Content Include="angular\individual.html" />
     <Content Include="angular\individual.js" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />

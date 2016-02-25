@@ -1,18 +1,15 @@
 ﻿<div class="container" ng-app="myApp">
     <h1>
-        Bootstrap project for AngularJS 1.5
+        The Application Submission System
     </h1>
 
-    <div ng-controller="individualController">
-        <h2>Value from controller: {{ title }}</h2>
-
-        <p>Counter: {{ counter }}</p>
-
-        <button class="btn btn-success glyphicon glyphicon-arrow-up"   ng-click="up()"></button>
-        <button class="btn btn-danger  glyphicon glyphicon-arrow-down" ng-click="down()"></button>
-
-        <div ng-show="isHigh()" class="alert alert-info" role="alert">Hey the counter is high</div>
-
+    <div class="row">
+        <div class="col-md-2">
+            <a href="#/ind" class="btn btn-link">Individual</a>
+            <a href="#/comp" class="btn btn-link">Company</a>
+        </div>
+        <div class="col-md-10">
+            <div ng-view></div>
+        </div>
     </div>
-
 </div>
