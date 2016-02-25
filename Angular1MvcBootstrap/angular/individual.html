@@ -1,10 +1,22 @@
 ﻿<div>
     <h2>Individual Application Form</h2>
 
-    <p>Counter: {{ counter }}</p>
-
-    <button class="btn btn-success glyphicon glyphicon-arrow-up" ng-click="up()"></button>
-    <button class="btn btn-danger  glyphicon glyphicon-arrow-down" ng-click="down()"></button>
-
-    <div ng-show="isHigh()" class="alert alert-info" role="alert">Hey the counter is high</div>
+    <table>
+        <tr>
+            <td>Country</td>
+            <td>
+                <select ng-model="selectedCountry">
+                    <option ng-repeat="country in countries">{{ country }}</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td><input type="text" ng-model="name" /></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td> <button class="btn btn-success" ng-click="submitMyForm()">Submit</button> </td>
+        </tr>
+    </table>   
 </div>

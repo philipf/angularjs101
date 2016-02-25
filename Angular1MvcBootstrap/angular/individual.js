@@ -2,24 +2,25 @@
     'use strict';
 
     var app = angular.module('myApp');
-    app.controller('individualController', ['$scope', individualController]);
+    app.controller('individualController', ['$scope', 'submissionService',  individualController]);
 
-    function individualController($scope) {
-        console.log('controller created');
-        $scope.title = 'hello world';
-        $scope.counter = 0;
+    function individualController($scope, submissionService) {
+        console.log('individualController created');
 
-        $scope.up = function() {
-            $scope.counter++;
-        }
+        submissionService.getCountries(function(response) {
+            $scope.countries = response.data;
+        }),
+        function(error) {
+            alert(error);
+        };
 
-        $scope.down = function () {
-            $scope.counter--;
-        }
+        $scope.submitMyForm = function () {
+            var form = {
+                country: $scope.selectedCountry,
+                name: $scope.name
+            }
 
-        $scope.isHigh = function () {
-            console.log('called');
-            return $scope.counter >= 10;
+            alert(JSON.stringify(form));
         }
     }
 })();

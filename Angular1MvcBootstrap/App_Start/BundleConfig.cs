@@ -18,6 +18,8 @@ namespace Angular1MvcBootstrap
                 .Include("~/angular/app.js")
                 .Include("~/angular/individual.js")
                 .Include("~/angular/company.js")
+                .Include("~/angular/submissionService.js")
+
                 );
         }
     }

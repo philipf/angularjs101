@@ -5,6 +5,7 @@
     app.controller('companyController', ['$scope', companyController]);
 
     function companyController($scope) {
-        
+        console.log('companyController created');
+
     }
 })();
