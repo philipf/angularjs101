@@ -1,16 +1,19 @@
-﻿<div ng-app="myApp">
+﻿<div class="container" ng-app="myApp">
     <h1>
         Bootstrap project for AngularJS 1.5
     </h1>
 
-    <p>The value of PI is {{ 22 / 7 }}</p>
-    <hr/>
+    <p>
+        The value of PI is
+        <span class="text-info">{{ 22 / 7 }}</span> 
+    </p>
+    <hr />
 
 
     <p>Enter a value</p>
-    <input type="text" ng-model="myValue"/>
+    <input type="text" ng-model="myValue" />
     <br />
     <br />
-    <p>The entered value is:</p>
-    {{ myValue }}
+    <p>The entered value is: <span class="text-info">{{ myValue }}</span> </p>
+    
 </div>

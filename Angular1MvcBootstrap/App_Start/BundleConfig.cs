@@ -7,8 +7,10 @@ namespace Angular1MvcBootstrap
     {
         public static void RegisterBundles(BundleCollection bundles)
         {
-            bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/site.css"));
+            bundles.Add(new StyleBundle("~/Content/css")
+                .Include("~/Content/bootstrap.css")
+                .Include("~/Content/bootstrap-theme.css")
+                .Include("~/Content/site.css"));
 
             bundles.Add(new ScriptBundle("~/myApp")
                 .Include("~/Scripts/angular.js")
